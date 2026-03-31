@@ -1,104 +1,94 @@
- JOB_ANALYSERS_USING_SQL
-Menu-driven Python + SQLite job portal. Applicants can register with multiple skills, experience and contact. Recruiters filter candidates by skill and experience. System tracks search trends and shows top in-demand skills. Includes delete option, validation and PrettyTable-based output.
- Job Portal Analyzer (Python + SQLite)
+# Job Portal Analyzer
 
- 📌 Overview
-
-This project is a menu-driven job portal system built using Python and SQLite. It allows applicants to apply for jobs and recruiters to search for suitable candidates based on skills and experience. The system also tracks trending skills based on recruiter searches.
+A menu-driven job portal system built using Python and SQLite. It allows applicants to register with multiple skills and enables recruiters to efficiently search and filter candidates based on requirements. The system also keeps track of skill demand trends based on recruiter activity.
 
 ---
 
- 🚀 Features
+## Features
 
 * Apply for job with multiple skills
-* Recruit applicants based on skill and experience
-* Display only matched skill in results
+* Recruit applicants using skill and experience filters
+* Displays only matched skill in results
 * Delete application using name and contact
-* Track and display top 5 in-demand skills
-* Clean tabular output using PrettyTable
-* Input validation to avoid runtime errors
+* Tracks skill demand based on recruiter searches
+* Shows top 5 most in-demand skills
+* Input validation to prevent errors
+* Tabular output using PrettyTable
 
 ---
 
- 🛠️ Technologies Used
+## Technologies Used
 
-* Python
-* SQLite3
-* PrettyTable
-
----
-
- 📂 Database Structure
-
- 1. Applicant Table
-
-* id (Primary Key)
-* name
-* experience
-* skill (comma-separated for multiple skills)
-* contact_number
-
- 2. Skills Table
-
-* skill_name (Primary Key)
-* search_count
+| Technology  | Purpose                |
+| ----------- | ---------------------- |
+| Python      | Core application logic |
+| SQLite      | Database management    |
+| PrettyTable | Clean tabular output   |
 
 ---
 
- ▶️ How to Run
+## Database Structure
 
-1. Install required library:
+### Applicant Table
 
-   ```
-   pip install prettytable
-   ```
-2. Run the program:
-
-   ```
-   python job_analyser.py
-   ```
-3. Follow the menu options in terminal
+| Field Name     | Description                       |
+| -------------- | --------------------------------- |
+| id             | Unique ID                         |
+| name           | Applicant name                    |
+| experience     | Years of experience               |
+| skill          | Multiple skills (comma-separated) |
+| contact_number | Contact details                   |
 
 ---
 
- 📊 Functionality
+### Skills Table
 
- Apply for Job
-
-User enters name, experience, contact and selects multiple skills.
-
- Recruit Applicant
-
-Recruiter selects skill and required experience. Matching candidates are displayed.
-
- Trend Analyzer
-
-Shows top 5 most searched skills based on recruiter activity.
-
- Delete Application
-
-Applicant can remove their record using name and contact number.
+| Field Name   | Description                               |
+| ------------ | ----------------------------------------- |
+| skill_name   | Skill name                                |
+| search_count | Tracks how frequently a skill is searched |
 
 ---
 
- 💡 Key Concepts Used
+## How to Run
 
-* Menu-driven programming
-* SQL queries (INSERT, SELECT, UPDATE, DELETE)
-* Data filtering using LIKE
-* List handling and string manipulation
-
----
-
- 📈 Future Improvements
-
-* GUI using Tkinter
-* Login system (Applicant/Recruiter)
-* Resume upload and ranking system
-* Advanced recommendation system
+```bash id="f7q2hz"
+pip install prettytable
+python job_analyser.py
+```
 
 ---
 
- 👨‍💻 Author
+## Key Functionalities
 
-Developed as a mini project for academic purposes.
+### Apply for Job
+
+Applicants can enter their details and select multiple skills. The system stores structured data which helps in understanding applicant profiles.
+
+### Recruit Applicant
+
+Recruiters can filter candidates based on required skills and experience. The system uses condition-based selection to display relevant candidates.
+
+### Trend Analyzer
+
+The system records how often each skill is searched and displays the top 5 most in-demand skills. This helps in identifying patterns in job market demand.
+
+### Delete Application
+
+Applicants can remove their data securely using their name and contact number.
+
+---
+
+## Future Improvements
+
+* Graphical User Interface (GUI)
+* Login system
+* Resume upload
+* Intelligent recommendation system for jobs and candidates
+* Predictive insights for skill demand
+
+---
+
+## Conclusion
+
+This project demonstrates how Python and SQLite can be used to build a functional job portal system. It also provides insights into handling structured data, filtering logic, and identifying patterns in user activity, making it useful for understanding real-world job market behavior.
