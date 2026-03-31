@@ -94,7 +94,7 @@ while True:
             print("Invalid experience")
             continue
 
-        # update search count
+        
         cursor.execute(
             "UPDATE skills SET search_count = search_count + 1 WHERE skill_name = ?",
             (req_skill,)
