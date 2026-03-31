@@ -79,13 +79,7 @@ Applicants can remove their data securely using their name and contact number.
 
 ---
 
-## Future Improvements
 
-* Graphical User Interface (GUI)
-* Login system
-* Resume upload
-* Intelligent recommendation system for jobs and candidates
-* Predictive insights for skill demand
 
 ---
 
